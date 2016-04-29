@@ -1,0 +1,23 @@
+apply plugin: 'java'
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    compile 'org.slf4j:slf4j-api:1.7.12'
+    compile 'org.slf4j:slf4j-simple:1.7.12'
+    compile 'org.apache.commons:commons-math:3.6.1'
+    compile 'org.knowm.xchart:xchart:3.0.3'
+
+    testCompile 'junit:junit:4.12'
+}
+
+test {
+    testLogging.showStandardStreams = true
+    LogLevel.DEBUG
+}
+
+tasks.withType(Test) {
+    enableAssertions = true
+} 
